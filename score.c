@@ -175,6 +175,7 @@ void anaScore(SS stu[], int N)
 	/*总评成绩分析*/
 	float mean_value_generalScore =0;
 	float variance_generalScore = 0;
+	float p, q;
 
 	for (int i = 0; i < N; i++)
 	{
@@ -188,9 +189,31 @@ void anaScore(SS stu[], int N)
 		variance_generalScore += (mean_value_generalScore -stu[i].generalScore)*(mean_value_generalScore - stu[i].generalScore);
 	}
 	variance_generalScore = variance_generalScore / N;
+	variance_generalScore = sqrt(variance_generalScore);
 	printf("全班学生总评成绩的均值是: %f", mean_value_generalScore);
 	printf("\n");
 	printf("全班学生总评成绩的标准方差是: %f\n", variance_generalScore);
+
+	p = mean_value_generalScore;
+	q = variance_generalScore;
+	if (p >= 80) {
+		if (p >= 85) {
+			if (p >= 90) {
+				printf("全班学生总评成绩的均值优秀\n");
+			}
+			else printf("全班学生总评成绩的均值良好\n");
+		}
+		else printf("全班学生总评成绩的均值普通\n");
+	}
+	if (q >= 3) {
+		if (q >= 4) {
+			if (q >= 5) {
+				printf("全班学生总评成绩差距很大\n");
+			}
+			else printf("全班学生总评成绩差距适中\n");
+		}
+		else printf("全班学生总评成绩比较均衡\n");
+	}
 
 	/*实验成绩分析*/
 	float mean_value_experScore = 0;
@@ -208,13 +231,36 @@ void anaScore(SS stu[], int N)
 		variance_experScore += (mean_value_experScore - stu[i].experScore)*(mean_value_experScore - stu[i].experScore);
 	}
 	variance_experScore = variance_experScore / N;
+	variance_experScore = sqrt(variance_experScore);
 	printf("全班学生实验成绩的均值是: %f", mean_value_experScore);
 	printf("\n");
 	printf("全班学生实验成绩的标准方差是: %f\n", variance_experScore);
 
+	p = mean_value_experScore;
+	q = variance_experScore;
+	if (p >= 80) {
+		if (p >= 85) {
+			if (p >= 90) {
+				printf("全班学生实验成绩的均值优秀\n");
+			}
+			else printf("全班学生实验成绩的均值良好\n");
+		}
+		else printf("全班学生实验成绩的均值普通\n");
+	}
+	if (q >= 3) {
+		if (q >= 4) {
+			if (q >= 5) {
+				printf("全班学生实验成绩差距很大\n");
+			}
+			else printf("全班学生实验成绩差距适中\n");
+		}
+		else printf("全班学生实验成绩比较均衡\n");
+	}
+
 	/*平时成绩分析*/
 	float mean_value_dailyScore = 0;
 	float variance_dailyScore = 0;
+
 
 	for (int i = 0; i < N; i++)
 	{
@@ -228,11 +274,32 @@ void anaScore(SS stu[], int N)
 		variance_dailyScore += (mean_value_dailyScore - stu[i].dailyScore)*(mean_value_dailyScore - stu[i].dailyScore);
 	}
 	variance_dailyScore = variance_dailyScore / N;
+	variance_dailyScore = sqrt(variance_dailyScore);
+
 	printf("全班学生平时成绩的均值是: %f", mean_value_dailyScore);
 	printf("\n");
 	printf("全班学生平时成绩的标准方差是: %f\n", variance_dailyScore);
 
-
+	p = mean_value_dailyScore;
+	q = variance_dailyScore;
+	if (p>=80) {
+		if (p >= 85) {
+			if (p >= 90) {
+				printf("全班学生平时成绩的均值优秀\n");
+			}
+			else printf("全班学生平时成绩的均值良好\n");
+		}
+		else printf("全班学生平时成绩的均值普通\n");
+	}
+	if (q >= 3) {
+		if (q >= 4) {
+			if (q >= 5) {
+				printf("全班学生平时成绩差距很大\n");
+			}
+			else printf("全班学生平时成绩差距适中\n");
+		}
+		else printf("全班学生平时成绩比较均衡\n");
+	}
 	/*期末成绩分析*/
 	float mean_value_finalScore = 0;
 	float variance_finalScore = 0;
@@ -249,11 +316,31 @@ void anaScore(SS stu[], int N)
 		variance_finalScore += (mean_value_finalScore - stu[i].finalScore)*(mean_value_finalScore - stu[i].finalScore);
 	}
 	variance_finalScore = variance_finalScore / N;
+	variance_finalScore = sqrt(variance_finalScore);
 	printf("全班学生期末成绩的均值是: %f", mean_value_finalScore);
 	printf("\n");
 	printf("全班学生期末成绩的标准方差是: %f\n", variance_finalScore);
 
-
+	p = mean_value_finalScore;
+	q = variance_finalScore;
+	if (p >= 80) {
+		if (p >= 85) {
+			if (p >= 90) {
+				printf("全班学生期末成绩的均值优秀\n");
+			}
+			else printf("全班学生期末成绩的均值良好\n");
+		}
+		else printf("全班学生期末成绩的均值普通\n");
+	}
+	if (q >= 3) {
+		if (q >= 4) {
+			if (q >= 5) {
+				printf("全班学生期末成绩差距很大\n");
+			}
+			else printf("全班学生期末成绩差距适中\n");
+		}
+		else printf("全班学生期末成绩比较均衡\n");
+	}
 
 
 	getchar();
